@@ -1,7 +1,3 @@
-output "prometheus_scraper_logging_configurations_id" {
-  description = "Map of id values across all prometheus_scraper_logging_configurations, keyed the same as var.prometheus_scraper_logging_configurations"
-  value       = { for k, v in aws_prometheus_scraper_logging_configuration.prometheus_scraper_logging_configurations : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "prometheus_scraper_logging_configurations_logging_destination" {
   description = "Map of logging_destination values across all prometheus_scraper_logging_configurations, keyed the same as var.prometheus_scraper_logging_configurations"
   value       = { for k, v in aws_prometheus_scraper_logging_configuration.prometheus_scraper_logging_configurations : k => v.logging_destination if v.logging_destination != null && length(v.logging_destination) > 0 }
